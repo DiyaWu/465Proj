@@ -7,6 +7,7 @@ import {
   KeyboardAvoidingView
 } from "react-native";
 import { Block, Checkbox, Text, theme } from "galio-framework";
+import { MaterialIcons } from '@expo/vector-icons';
 
 import { Button, Icon, Input } from "../components";
 import { Images, argonTheme } from "../constants";
@@ -26,11 +27,17 @@ class Register extends React.Component {
             <Block style={styles.registerContainer}>
               <Block flex={0.25} middle style={styles.socialConnect}>
                 <Text color="#8898AA" size={12}>
-                  Sign up with
+                  Sign in with
                 </Text>
                 <Block row style={{ marginTop: theme.SIZES.BASE }}>
                   <Button style={{ ...styles.socialButtons, marginRight: 30 }}>
                     <Block row>
+                      <MaterialIcons 
+                      name="facebook" 
+                      size={16} 
+                      color="black" 
+                      style={{ marginTop: 2, marginRight: 5 }}/>
+                      {/*
                       <Icon
                         name="logo-github"
                         family="Ionicon"
@@ -38,7 +45,8 @@ class Register extends React.Component {
                         color={"black"}
                         style={{ marginTop: 2, marginRight: 5 }}
                       />
-                      <Text style={styles.socialTextButtons}>GITHUB</Text>
+                      */}
+                      <Text style={styles.socialTextButtons}>FaceBook</Text>
                     </Block>
                   </Button>
                   <Button style={styles.socialButtons}>
@@ -58,7 +66,7 @@ class Register extends React.Component {
               <Block flex>
                 <Block flex={0.17} middle>
                   <Text color="#8898AA" size={12}>
-                    Or sign up the classic way
+                    Or sign in with email
                   </Text>
                 </Block>
                 <Block flex center>
@@ -67,6 +75,7 @@ class Register extends React.Component {
                     behavior="padding"
                     enabled
                   >
+                    {/* 
                     <Block width={width * 0.8} style={{ marginBottom: 15 }}>
                       <Input
                         borderless
@@ -82,7 +91,8 @@ class Register extends React.Component {
                         }
                       />
                     </Block>
-                    <Block width={width * 0.8} style={{ marginBottom: 15 }}>
+                      */}
+                    <Block width={width * 0.8} style={{ marginBottom: 30 }}>
                       <Input
                         borderless
                         placeholder="Email"
@@ -97,7 +107,7 @@ class Register extends React.Component {
                         }
                       />
                     </Block>
-                    <Block width={width * 0.8}>
+                    <Block width={width * 0.8} style={{ marginBottom: 30 }}>
                       <Input
                         password
                         borderless
